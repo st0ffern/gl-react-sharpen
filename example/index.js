@@ -34,10 +34,7 @@ export default class App extends Component {
           step={0.1}
           value={this.state.sharpen}
           onChange={val => console.log(val)}
-          onChange={e => {
-            console.log(e.target.value)
-            this.setState({sharpen: parseFloat(e.target.value)})
-          }}
+          onChange={e => this.setState({sharpen: parseFloat(e.target.value)})}
         />
       </div>
     );
