@@ -10,7 +10,7 @@
 ## Usage Examples
 
 ```js
-var Sharpen = require("gl-react-sharpen").Negative;
+var Sharpen = require("gl-react-sharpen").Sharpen;
 // or
 import {Sharpen} from "gl-react-sharpen";
 ```

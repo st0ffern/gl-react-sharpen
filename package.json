@@ -1,6 +1,6 @@
 {
   "name": "gl-react-sharpen",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Universal gl-react filter with sharpen effect",
   "main": "lib/index.js",
   "scripts": {
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stoffern/gl-react-sepia.git"
+    "url": "git+https://github.com/stoffern/gl-react-sharpen.git"
   },
   "author": "Kristoffer Klevenberg",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stoffern/gl-react-sepia/issues"
+    "url": "https://github.com/stoffern/gl-react-sharpen/issues"
   },
-  "homepage": "https://github.com/stoffern/gl-react-sepia#readme",
+  "homepage": "https://github.com/stoffern/gl-react-sharpen#readme",
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.4.5",
