@@ -1,6 +1,6 @@
 {
   "name": "gl-react-sharpen",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "Universal gl-react filter with sharpen effect",
   "main": "lib/index.js",
   "scripts": {

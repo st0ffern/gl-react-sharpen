@@ -1,10 +1,10 @@
-const GL = require("gl-react");
-const React = require("react");
-const PropTypes = require("prop-types")
 
-const shaders = GL.Shaders.create({
+import React, { Component } from "react";
+import { Shaders, Node, GLSL } from "gl-react";
+
+const shaders = Shaders.create({
   Sharpen: {
-    frag: `
+    frag: GLSL`
       precision highp float;
       varying vec2 uv;
       uniform sampler2D t;
@@ -26,30 +26,26 @@ const shaders = GL.Shaders.create({
 
         gl_FragColor = vec4(col,1.0);
 
-      }`
+      }
+    `
   }
 });
 
-module.exports = GL.createComponent(
-  ({ children: t, factor, height, width }) =>
-    <GL.Node
-      shader={shaders.Sharpen}
-      uniforms={{ 
-        t, 
-        factor,
-        resolution: [ width, height ],
-      }}
-    />,
-  {
-    displayName: "Sharpen",
-    defaultProps: {
-      factor: 0,
-    },
-    propTypes: {
-      children: PropTypes.any.isRequired,
-      factor: PropTypes.number,
-      width: PropTypes.number.isRequired,
-      height: PropTypes.number.isRequired,
-    }
+export default class ContrastSaturationBrightness extends Component {
+  static defaultProps = {
+    factor: 0
   }
-);
+
+  render() {
+    return (
+      <Node 
+        shader={shaders.Sharpen} 
+        uniforms={{ 
+          t: t, 
+          factor: factor,
+          resolution: [ width, height ],
+        }}
+      />
+    );
+  }
+}
